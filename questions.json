@@ -1,0 +1,92 @@
+[
+    {
+        "question": "¿Cuál es la capital de Francia?",
+        "answers": [
+            { "text": "París", "correct": true },
+            { "text": "Londres", "correct": false },
+            { "text": "Berlín", "correct": false },
+            { "text": "Madrid", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Qué elemento químico tiene el símbolo 'O'?",
+        "answers": [
+            { "text": "Oro", "correct": false },
+            { "text": "Osmio", "correct": false },
+            { "text": "Oxígeno", "correct": true },
+            { "text": "Oganesón", "correct": false }
+        ]
+    },
+    {
+        "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
+        "answers": [
+            { "text": "1914", "correct": false },
+            { "text": "1939", "correct": true },
+            { "text": "1945", "correct": false },
+            { "text": "1929", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Quién escribió 'Cien años de soledad'?",
+        "answers": [
+            { "text": "Mario Vargas Llosa", "correct": false },
+            { "text": "Pablo Neruda", "correct": false },
+            { "text": "Gabriel García Márquez", "correct": true },
+            { "text": "Jorge Luis Borges", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Cuál es el océano más grande del mundo?",
+        "answers": [
+            { "text": "Océano Atlántico", "correct": false },
+            { "text": "Océano Índico", "correct": false },
+            { "text": "Océano Pacífico", "correct": true },
+            { "text": "Océano Ártico", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Quién pintó la Mona Lisa?",
+        "answers": [
+            { "text": "Vincent van Gogh", "correct": false },
+            { "text": "Pablo Picasso", "correct": false },
+            { "text": "Leonardo da Vinci", "correct": true },
+            { "text": "Miguel Ángel", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Cuál es el planeta más grande del sistema solar?",
+        "answers": [
+            { "text": "Tierra", "correct": false },
+            { "text": "Júpiter", "correct": true },
+            { "text": "Saturno", "correct": false },
+            { "text": "Marte", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Cuál es el río más largo del mundo?",
+        "answers": [
+            { "text": "Río Amazonas", "correct": true },
+            { "text": "Río Nilo", "correct": false },
+            { "text": "Río Yangtsé", "correct": false },
+            { "text": "Río Misisipi", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Cuál es el país más poblado del mundo?",
+        "answers": [
+            { "text": "India", "correct": false },
+            { "text": "Estados Unidos", "correct": false },
+            { "text": "China", "correct": true },
+            { "text": "Indonesia", "correct": false }
+        ]
+    },
+    {
+        "question": "¿Quién desarrolló la teoría de la relatividad?",
+        "answers": [
+            { "text": "Isaac Newton", "correct": false },
+            { "text": "Albert Einstein", "correct": true },
+            { "text": "Galileo Galilei", "correct": false },
+            { "text": "Nikola Tesla", "correct": false }
+        ]
+    }
+]
