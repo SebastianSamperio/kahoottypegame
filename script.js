@@ -12,6 +12,7 @@ const incorrectElement = document.getElementById('incorrect');
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 let incorrectCount = 0; // Contador de respuestas incorrectas
+let correctCount = 0; // Contador de respuestas correctas
 let timeLeft;
 let timerInterval;
 let answeredCorrectly = false;
@@ -40,17 +41,20 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
+    answerButtonsElement.innerHTML = ''; // Limpiamos el contenido anterior de los botones de respuesta
+    
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn', 'btn-primary', 'animate__animated', 'animate__fadeIn');
         if (answer.correct) {
-            button.dataset.correct = answer.correct;
+            button.dataset.correct = 'true';
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
 }
+
 
 function resetState() {
     clearInterval(timerInterval);
@@ -63,56 +67,52 @@ function resetState() {
     }
 }
 
+
 function selectAnswer(e) {
     const selectedButton = e.target;
-    if (answeredCorrectly) return;
     const correct = selectedButton.dataset.correct === 'true';
+    
+    // Actualiza el contador de respuestas correctas si la respuesta es correcta
     if (correct) {
-        score++;
-        scoreElement.innerText = `Puntuación: ${score}`;
-        answeredCorrectly = true;
-        Swal.fire({
-            icon: 'success',
-            title: 'Correcto',
-            text: '¡Buena respuesta!',
-            timer: 1000,
-            showConfirmButton: false,
-            position: 'center',
-            backdrop: false,
-        }).then(() => {
-            if (shuffledQuestions.length > currentQuestionIndex + 1) {
-                currentQuestionIndex++;
-                setNextQuestion();
-            } else {
-                endGame();
-            }
-        });
-    } else {
-        selectedButton.classList.add('wrong');
-        Swal.fire({
-            icon: 'error',
-            title: 'Incorrecto',
-            text: 'Respuesta equivocada',
-            timer: 1000,
-            showConfirmButton: false,
-            position: 'center',
-            backdrop: false,
-        }).then(() => {
-            incorrectCount++; // Incrementar el contador de respuestas incorrectas
-            incorrectElement.innerText = `Respuestas incorrectas: ${incorrectCount}`; // Actualizar el contador en el tablero
-            if (shuffledQuestions.length > currentQuestionIndex + 1) {
-                currentQuestionIndex++;
-                setNextQuestion();
-            } else {
-                endGame();
-            }
-        });
+        correctCount++;
     }
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct === 'true');
-    });
-    clearInterval(timerInterval);
+    
+    // Aplica las clases de estilo según si la respuesta es correcta o incorrecta
+    setStatusClass(selectedButton, correct);
+
+    // Actualiza el estado para indicar si se ha respondido correctamente
+    answeredCorrectly = correct;
+    
+    // Desactiva los botones para evitar selecciones múltiples
+    disableAnswerButtons();
+    
+    // Avanza al siguiente juego
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        currentQuestionIndex++;
+        setTimeout(setNextQuestion, 1000); // Agrega un pequeño retraso antes de mostrar la siguiente pregunta
+    } else {
+        setTimeout(endGame, 1000); // Agrega un pequeño retraso antes de finalizar el juego
+    }
 }
+
+function setStatusClass(element, correct) {
+    // Remueve todas las clases de estado previas
+    element.classList.remove('correct', 'wrong');
+    // Agrega la clase correcta según la respuesta
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
+}
+
+function disableAnswerButtons() {
+    // Desactiva todos los botones de respuesta para evitar selecciones múltiples
+    answerButtonsElement.querySelectorAll('button').forEach(button => {
+        button.disabled = true;
+    });
+}
+
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -161,7 +161,7 @@ function endGame() {
     Swal.fire({
         icon: 'info',
         title: 'Juego terminado',
-        text: `Tu puntuación final es de: ${score}.          Respuestas incorrectas: ${incorrectCount}`,
+        text: `Tu puntuación final es: ${correctCount}. ¡Felicidades!`,
         showConfirmButton: true,
         position: 'center',
         backdrop: false,

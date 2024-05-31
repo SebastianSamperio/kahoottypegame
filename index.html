@@ -1,29 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Preguntas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Filosofía</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: skyblue;
+        }
+
+        .navbar {
+            background-color: rgb(63, 196, 248);
+            /* Azul más fuerte */
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: rgb(0, 0, 0);
+            /* Color del texto del navbar */
+        }
+    </style>
 </head>
+
 <body>
-    <div id="menu-container" class="container text-center">
-        <h1 class="my-4">Juego de Preguntas</h1>
-        <button id="start-btn" class="btn btn-primary my-4">Iniciar Juego</button>
-    </div>
-    <div id="game-container" class="container d-none">
-        <div id="question-container" class="text-center">
-            <h2 id="question"></h2>
-            <div id="answer-buttons" class="mt-4"></div>
-            <div id="timer" class="mt-4"></div>
-            <div id="score" class="mt-4"></div>
-            <div id="incorrect" class="mt-4"></div> <!-- Nuevo elemento para mostrar el contador de respuestas incorrectas -->
-            <button id="next-btn" class="btn btn-primary mt-4 d-none">Siguiente</button>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand">Filosofía</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Introducción</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Cuadrooposicion.html">Cuadro de oposición</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="juego.html">Juego de Preguntas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="mb-5 p-4">
+                    <p class="h2 text-center mb-3">Filosofía</p>
+                    <p class="text-justify lead mb-3">
+                        A lo largo de este semestre hemos trabajado, indagado y comprendido un poco más acerca
+                        de la filosofía, conociendo así el <strong>"Cuadro de oposición"</strong> el cual, además de
+                        ser interesante es un tema un poco extenso, para lo cual creamos una dinámica creativa que
+                        está basada en el aprendizaje y enseñanza de juicios y justificaciones para así, lograr
+                        facilitar un poco más su estudio.
+                    </p>
+                    <p class="text-justify lead mb-3">
+                        Contar con una dinámica interactiva de estudio nos ayuda a capturar la atención de los
+                        estudiantes y motivarlos a participar activamente. Al estar inmersos en un entorno lúdico,
+                        sintiéndose más comprometidos con el contenido y disposición para aprender.
+                        De igual forma, la interactividad facilita la retención de información.
+                    </p>
+                    <p class="text-justify lead mb-3">
+                        (Al experimentar y aplicar conceptos de manera práctica, los estudiantes internalizan mejor
+                        los contenidos. Además, la repetición en un contexto interactivo refuerza la memoria).
+                        Además que fomentan la colaboración entre estudiantes.
+                    </p>
+                    <p class="text-justify lead mb-3">
+                        (Trabajar juntos en juegos o actividades promueve
+                        habilidades como la comunicación, el trabajo en equipo y la resolución de problemas).
+                        Los juegos interactivos estimulan la creatividad al plantear situaciones desafiantes.
+                        Haciendo que los estudiantes piensen de manera crítica para resolver problemas y tomar
+                        decisiones dentro del juego.
+                    </p>
+                    <p class="text-justify lead mb-3">
+                        De igual forma, la interactividad facilita la retención de información. (Al experimentar y
+                        aplicar conceptos de manera práctica, los estudiantes internalizan mejor los contenidos.
+                        Además, la repetición en un contexto interactivo refuerza la memoria).
+                    </p>
+                    <p class="text-justify lead mb-3">
+                        Además que fomentan la colaboración entre estudiantes. (Trabajar juntos en juegos o
+                        actividades promueve habilidades como la comunicación, el trabajo en equipo y la resolución
+                        de problemas).
+                    </p>
+                    <p class="text-justify lead mb-3">
+                        Los juegos interactivos estimulan la creatividad al plantear situaciones desafiantes.
+                        Haciendo que los estudiantes piensen de manera crítica para resolver problemas y tomar
+                        decisiones dentro del juego.
+                    </p>
+                    <p class="text-justify lead mb-3"><strong>Ejemplo:</strong>
+                        En los negocios, competir con los precios de la India y China es imposible. Eso nos obliga a
+                        crear un nuevo valor como base para competir. Y esto requiere un compromiso más serio con la
+                        creatividad que el que tenemos ahora.
+                    </p>
+                    <p class="text-justify lead mb-3"><strong>En conclusión:</strong> La creatividad puede
+                        ayudar a superar los obstáculos: Al enfrentar problemas o desafíos, la creatividad puede
+                        ayudarnos a encontrar soluciones innovadoras y originales.
+                    </p>
+                    <ul class="list-unstyled lead">
+                        <li class="text-justify lead mb-3"><strong>Puede mejorar nuestra autoexpresión:</strong>
+                            <ul>
+                                <li>
+                                    La creatividad nos permite expresar nuestros pensamientos, sentimientos y emociones
+                                    de manera única e individual.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-justify lead mb-3"><strong>La creatividad puede ayudar a alcanzar nuestras
+                                metas:</strong>
+                            <ul>
+                                <li>
+                                    Al pensar de manera creativa, podemos encontrar nuevas y mejores formas de alcanzar
+                                    nuestras metas y objetivos.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-justify lead mb-3"><strong>La creatividad puede ayudarnos a ver las cosas de
+                                manera diferente:</strong>
+                            <ul>
+                                <li>
+                                    La creatividad nos permite ver las cosas desde perspectivas diferentes y nos ayuda a
+                                    tener una mente abierta.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-justify lead mb-3"><strong>La creatividad puede mejorar nuestra relación con los
+                                demás:</strong>
+                            <ul>
+                                <li>
+                                    Al ser creativos, podemos comunicarnos de manera más efectiva con los demás y
+                                    entender mejor sus perspectivas y puntos de vista.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-justify lead mb-3"><strong>La creatividad puede ayudarnos a cultivar nuestra
+                                curiosidad:</strong>
+                            <ul>
+                                <li>
+                                    La creatividad nos impulsa a explorar nuevas ideas y experiencias, lo que nos ayuda
+                                    a cultivar nuestra curiosidad y aprendizaje continúo.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-justify lead mb-3"><strong>La creatividad puede ayudarnos a desarrollar nuestra
+                                confianza:</strong>
+                            <ul>
+                                <li>
+                                    Experimentar con nuevas ideas y proyectos, podemos desarrollar nuestra confianza en
+                                    nuestras habilidades y capacidades.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-justify lead mb-3"><strong>La creatividad puede ayudarnos a encontrar
+                                significado y propósito en nuestras vidas:</strong>
+                            <ul>
+                                <li>
+                                    La creatividad nos permite encontrar un sentido y un propósito en nuestras vidas y
+                                    nos ayuda a sentirnos más conectados con nosotros mismos y con los demás.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <script src="script.js"></script>
+
+
+
+    <!-- Bootstrap JS (incluyendo Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

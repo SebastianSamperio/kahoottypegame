@@ -1,92 +1,161 @@
-[
-    {
-        "question": "¿Cuál es la capital de Francia?",
-        "answers": [
-            { "text": "París", "correct": true },
-            { "text": "Londres", "correct": false },
-            { "text": "Berlín", "correct": false },
-            { "text": "Madrid", "correct": false }
+[{
+        "question": "Afirma o niega algo del sujeto de quien se habla.",
+        "answers": [{
+                "text": "Juicio",
+                "correct": true
+            },
+            {
+                "text": "Pregunta",
+                "correct": false
+            },
+            {
+                "text": "Demencia",
+                "correct": false
+            }
         ]
     },
     {
-        "question": "¿Qué elemento químico tiene el símbolo 'O'?",
-        "answers": [
-            { "text": "Oro", "correct": false },
-            { "text": "Osmio", "correct": false },
-            { "text": "Oxígeno", "correct": true },
-            { "text": "Oganesón", "correct": false }
+        "question": "¿Cuál de las siguientes es una ley del pensamiento?.",
+        "answers": [{
+                "text": "Ordenamiento lógico",
+                "correct": true
+            },
+            {
+                "text": "General de salud",
+                "correct": false
+            },
+            {
+                "text": "Ordenamiento de educación",
+                "correct": false
+            }
         ]
     },
     {
-        "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
-        "answers": [
-            { "text": "1914", "correct": false },
-            { "text": "1939", "correct": true },
-            { "text": "1945", "correct": false },
-            { "text": "1929", "correct": false }
+        "question": "Es la tercera operación mental, que genera una conclusión a un nuevo conocimiento.",
+        "answers": [{
+                "text": "Operaciones matemáticas",
+                "correct": false
+            },
+            {
+                "text": "Reflexión",
+                "correct": false
+            },
+            {
+                "text": "Razonamiento",
+                "correct": true
+            }
         ]
     },
     {
-        "question": "¿Quién escribió 'Cien años de soledad'?",
-        "answers": [
-            { "text": "Mario Vargas Llosa", "correct": false },
-            { "text": "Pablo Neruda", "correct": false },
-            { "text": "Gabriel García Márquez", "correct": true },
-            { "text": "Jorge Luis Borges", "correct": false }
+        "question": " Proviene del latin syllogismus que significa 'recojo conjuntamente'.",
+        "answers": [{
+                "text": "Siglo",
+                "correct": false
+            },
+            {
+                "text": "Siglismo",
+                "correct": true
+            },
+            {
+                "text": "Enlace",
+                "correct": false
+            }
         ]
     },
     {
-        "question": "¿Cuál es el océano más grande del mundo?",
-        "answers": [
-            { "text": "Océano Atlántico", "correct": false },
-            { "text": "Océano Índico", "correct": false },
-            { "text": "Océano Pacífico", "correct": true },
-            { "text": "Océano Ártico", "correct": false }
+        "question": "Filósofo griego que nació en Estagira y murió en la ciudad de Calcis. Discípulo de Platón y fundador del Liceo, es considerado uno de los más importantes pensadores de la humanidad.",
+        "answers": [{
+                "text": "Socrates",
+                "correct": false
+            },
+            {
+                "text": "Aristóreles",
+                "correct": true
+            },
+            {
+                "text": "Hegel",
+                "correct": false
+            }
         ]
     },
     {
-        "question": "¿Quién pintó la Mona Lisa?",
-        "answers": [
-            { "text": "Vincent van Gogh", "correct": false },
-            { "text": "Pablo Picasso", "correct": false },
-            { "text": "Leonardo da Vinci", "correct": true },
-            { "text": "Miguel Ángel", "correct": false }
+        "question": "Es una palabra o una frase que denota un individuo o una clase o el componente proposicional que expresa.",
+        "answers": [{
+                "text": "Termino menor",
+                "correct": false
+            },
+            {
+                "text": "Termino mayor",
+                "correct": false
+            },
+            {
+                "text": "Termino enlace",
+                "correct": true
+            }
         ]
     },
     {
-        "question": "¿Cuál es el planeta más grande del sistema solar?",
-        "answers": [
-            { "text": "Tierra", "correct": false },
-            { "text": "Júpiter", "correct": true },
-            { "text": "Saturno", "correct": false },
-            { "text": "Marte", "correct": false }
+        "question": "¿Qué juicio pertenece al enunciado 'Todo niño es inocente'?.",
+        "answers": [{
+                "text": "Universal, afirmativo",
+                "correct": true
+            },
+            {
+                "text": "Universal negativo",
+                "correct": false
+            },
+            {
+                "text": "Particular Afirmativo",
+                "correct": false
+            }
         ]
     },
     {
-        "question": "¿Cuál es el río más largo del mundo?",
-        "answers": [
-            { "text": "Río Amazonas", "correct": true },
-            { "text": "Río Nilo", "correct": false },
-            { "text": "Río Yangtsé", "correct": false },
-            { "text": "Río Misisipi", "correct": false }
+        "question": "Proposiciones categórica que se refiere a un sujeto específico o singular.",
+        "answers": [{
+                "text": "Particular",
+                "correct": true
+            },
+            {
+                "text": "Universal",
+                "correct": false
+            },
+            {
+                "text": "Contradicción",
+                "correct": false
+            }
         ]
     },
     {
-        "question": "¿Cuál es el país más poblado del mundo?",
-        "answers": [
-            { "text": "India", "correct": false },
-            { "text": "Estados Unidos", "correct": false },
-            { "text": "China", "correct": true },
-            { "text": "Indonesia", "correct": false }
+        "question": "¿Qué juicio pertenece al enunciado 'Ningún hombre es inmortal'?.",
+        "answers": [{
+                "text": "Universal, afirmativo",
+                "correct": false
+            },
+            {
+                "text": "particular, negativo",
+                "correct": false
+            },
+            {
+                "text": "Universal, negativo",
+                "correct": true
+            }
         ]
     },
     {
-        "question": "¿Quién desarrolló la teoría de la relatividad?",
-        "answers": [
-            { "text": "Isaac Newton", "correct": false },
-            { "text": "Albert Einstein", "correct": true },
-            { "text": "Galileo Galilei", "correct": false },
-            { "text": "Nikola Tesla", "correct": false }
+        "question": "¿Cuáles son los elementos del juicio?.",
+        "answers": [{
+                "text": "Verbo, conclusión y premisa",
+                "correct": false
+            },
+            {
+                "text": "Sujeto, predicado y verbos",
+                "correct": true
+            },
+            {
+                "text": "introducción, predicado y sujeto",
+                "correct": false
+            }
         ]
     }
 ]
